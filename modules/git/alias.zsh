@@ -31,7 +31,7 @@ alias g='git'
 
 # Branch (b)
 alias gb='git branch'
-alias gbc='git checkout -b'
+alias gcob='git checkout -b'
 alias gbl='git branch -v'
 alias gbL='git branch -av'
 alias gbx='git branch -d'
@@ -77,7 +77,8 @@ alias gdi='git status --porcelain --short --ignored | sed -n "s/^!! //p"'
 # Fetch (f)
 alias gf='git fetch'
 alias gfc='git clone'
-alias gfm='git pull'
+alias gpl='git pull'
+alias gplo='git pull origin'
 alias gfr='git pull --rebase'
 
 # Grep (g)
@@ -89,7 +90,7 @@ alias ggv='git grep --invert-match'
 alias ggw='git grep --word-regexp'
 
 # Index (i)
-alias gia='git add'
+alias ga='git add'
 alias giA='git add --patch'
 alias giu='git add --update'
 alias gid='git diff --no-ext-diff --cached'
@@ -117,6 +118,7 @@ alias gmt='git mergetool'
 
 # Push (p)
 alias gp='git push'
+alias gpo='git push origin'
 alias gpf='git push --force'
 alias gpa='git push --all'
 alias gpA='git push --all && git push --tags'
@@ -143,7 +145,8 @@ alias gRs='git remote show'
 alias gRb='git-hub-browse'
 
 # Stash (s)
-alias gs='git stash'
+alias gs='git status'
+alias gS='git stash'
 alias gsa='git stash apply'
 alias gsx='git stash drop'
 alias gsX='git-stash-clear-interactive'
