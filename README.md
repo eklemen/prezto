@@ -75,7 +75,7 @@ project; so, that you can commit your changes and push them to [GitHub][4] to
 not lose them. If you do not know how to use Git, follow this [tutorial][5] and
 bookmark this [reference][6].
 
-Resources
+Resou
 ---------
 
 The [Zsh Reference Card][7] and the [zsh-lovers][8] man page are indispensable.
