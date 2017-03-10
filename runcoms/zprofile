@@ -73,10 +73,12 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
-export NVM_DIR="/Users/evan.klemen/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # export PATH=/opt/bin:$PATH  #not sure if this is needed for 
+
+# This loads php7 as default. This was after running: 
+# `curl -s http://php-osx.liip.ch/install.sh | bash -s 7.1`
+export PATH=/usr/local/php5/bin:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
 
 # Setting PATH for Python 3.5
 # The orginal version is saved in .zprofile.pysave

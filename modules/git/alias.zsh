@@ -135,7 +135,7 @@ alias grs='git rebase --skip'
 
 # Remote (R)
 alias gR='git remote'
-alias gRl='git remote --verbose'
+alias grv='git remote --verbose'
 alias gRa='git remote add'
 alias gRx='git remote rm'
 alias gRm='git remote rename'
