@@ -79,9 +79,10 @@ export NVM_DIR="$HOME/.nvm"
 # Export php 7
 # curl -s https://php-osx.liip.ch/install.sh | bash -s 7.1
 export PATH=/usr/local/php5/bin:$PATH
-
+export PATH=/usr/local/mysql/bin:$PATH
 # export PATH=/opt/bin:$PATH  #not sure if this is needed for
 
 # Setting PATH for Python 3.5
 # The orginal version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
