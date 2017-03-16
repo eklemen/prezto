@@ -12,4 +12,17 @@ fi
 
 # Customize to your needs...
 alias vs='open -a Visual\ Studio\ Code ./'
+alias atom='open -a Atom ./'
+alias ide='open -a WebStorm ./'
+alias ll='ls -al'
 eval "$(fasd --init auto)"
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Export for  yarn
+export PATH="$PATH:`yarn global bin`"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
