@@ -105,6 +105,30 @@ function safe_force_push() {
     git push --force-with-lease
   fi
 }
+# Output list of recently checked out branches
+alias gh="git reflog | grep -i 'checkout:' | awk '{print \$1 \" \" \$2 \" \\033[32m\" \$NF \"\\033[0m\"}'"
+
+function gcmm() {
+    # Get the current branch name
+    local branch_name=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+    # Check if the branch name is available
+    if [ -n "$branch_name" ]; then
+        # Extract the prefix (e.g., ticket number or ID)
+        local prefix=$(echo "$branch_name" | cut -d'_' -f1)
+        # Extract the rest of the branch name and format it nicely
+        local description=$(echo "$branch_name" | cut -d'_' -f2- | tr '_' ' ')
+
+        # Build the commit message
+        local commit_message="$prefix $description"
+
+        # Open an interactive editor with the commit message pre-filled
+        git commit -m "$commit_message"
+    else
+        echo "Error: Could not detect a Git branch name."
+    fi
+}
+
 
 alias gpf=safe_force_push
 # Setting PATH for Python 3.11
