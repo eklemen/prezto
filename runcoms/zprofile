@@ -106,7 +106,7 @@ function safe_force_push() {
   fi
 }
 # Output list of recently checked out branches
-alias gh="git reflog | grep -i 'checkout:' | awk '{print \$1 \" \" \$2 \" \\033[32m\" \$NF \"\\033[0m\"}'"
+alias ghist="git reflog | grep -i 'checkout:' | awk '{print \$1 \" \" \$2 \" \\033[32m\" \$NF \"\\033[0m\"}' | head -n 10"
 
 function gcmm() {
     # Get the current branch name
@@ -128,6 +128,8 @@ function gcmm() {
         echo "Error: Could not detect a Git branch name."
     fi
 }
+
+alias gh="$HOME/.zprezto/branch-select.sh"
 
 
 alias gpf=safe_force_push
